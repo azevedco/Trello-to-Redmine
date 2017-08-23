@@ -54,7 +54,7 @@ $(document).ready(function(){
   $("#redminelogin").click(function(){
       
     redmineKey = $("#redminekey");
-    alert("still works key: " + redmineKey);
+    alert("still works key " + redmineKey);
     
     $.getJSON(url, function(result){
         $.each(result, function(i, field){
