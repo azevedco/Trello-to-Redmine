@@ -54,6 +54,7 @@ $(document).ready(function(){
   $("#redminelogin").click(function(){
       
     redmineKey = $("#redminekey");
+      $("#test1").append("Key: " + redmineKey);
     alert(("whatthefuck key ").append(redmineKey));
     
     $.getJSON(url, function(result){
