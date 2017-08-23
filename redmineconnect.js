@@ -23,6 +23,7 @@
 
 var userName = "";
 var passWord = "";
+var redmineKey = "";
 var url = "135.23.35.134:8099/redmine/issues.json?key=3edf27544b0dc1a88edc6dd6da00245dc05ca0b5";
 var status = {
   success: function() {
@@ -51,7 +52,9 @@ $(document).ready(function(){
   //});
   
   $("#redminelogin").click(function(){
-    alert("still works");
+      
+    redmineKey = $("#redminekey");
+    alert("still works key: " + redmineKey);
     
     $.getJSON(url, function(result){
         $.each(result, function(i, field){
