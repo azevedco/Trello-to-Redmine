@@ -1,3 +1,5 @@
+alert("I'm found!");
+
 TrelloPowerUp.initialize(
   'card-buttons': function(t, options)
     return [{
