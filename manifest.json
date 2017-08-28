@@ -6,10 +6,8 @@
   },
   "author": "Speax Inc.",
   "capabilities": [
-    "callback",
     "card-buttons",
-    "card-detail-badges",
-    "show-settings"
+    "board-buttons"
   ],
   "connectors": {
     "iframe": {
