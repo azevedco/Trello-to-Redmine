@@ -8,6 +8,12 @@ window.TrelloPowerUp.initialize({
       icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
       text: 'Redmine Sync Board',
       callback: onBtnClick
+    }, {
+      // but of course, you could also just kick off to a url if that's your thing
+      icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
+      text: 'Just a URL',
+      url: 'https://developers.trello.com',
+      target: 'Trello Developer Site' // optional target for above url
     }];
   },
   'card-buttons': function(t, options) {
