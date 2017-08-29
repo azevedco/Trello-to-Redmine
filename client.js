@@ -3,13 +3,13 @@ var test = function (t, opts) {
 };
 
 window.TrelloPowerUp.initialize({
-    'board-buttons': function(t, options){
-        return [{
-            icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
-            text: 'Redmine Sync Board',
-            callback: test
-        }];
-    },
+//    'board-buttons': function(t, options){
+//        return [{
+//            icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
+//            text: 'Redmine Sync Board',
+//            callback: test
+//        }];
+//    },
     'card-buttons': function(t, options) {
         return [{
             icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
