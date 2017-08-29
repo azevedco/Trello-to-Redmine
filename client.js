@@ -6,7 +6,7 @@ var test = function (t, opts) {
         console.log(JSON.stringify(data, null, 2));
     });
     
-    console.log('Function being called');
+    console.log('Full function should be getting called');
 };
 
 window.TrelloPowerUp.initialize({
