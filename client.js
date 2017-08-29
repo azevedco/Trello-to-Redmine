@@ -1,10 +1,12 @@
 var test = function (t, opts) {
-    var t = window.TrelloPowerUp.iframe();
+//    var t = window.TrelloPowerUp.iframe();
+//    
+//    return t.getAll()
+//    .then(function (data) {
+//        console.log(JSON.stringify(data, null, 2));
+//    });
     
-    return t.getAll()
-    .then(function (data) {
-        console.log(JSON.stringify(data, null, 2));
-    });
+    console.log('Function being called');
 };
 
 window.TrelloPowerUp.initialize({
@@ -19,7 +21,7 @@ window.TrelloPowerUp.initialize({
         return [{
             icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
             text: 'Redmine Sync Card',
-            callback: function (t, opts) { console.log('Do something else pleaasase'); }
+            callback: test//function (t, opts) { console.log('Do something else pleaasase'); }
         }, 
         {
             // but of course, you could also just kick off to a url if that's your thing
