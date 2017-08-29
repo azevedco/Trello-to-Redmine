@@ -1,3 +1,5 @@
+var test = 
+
 window.TrelloPowerUp.initialize({
   'board-buttons': function(t, options){
     return [{
@@ -5,7 +7,7 @@ window.TrelloPowerUp.initialize({
       text: 'Redmine Sync Board',
       callback: function (t, opts) {
           console.log('Someone clicked the button');
-        };
+        }
     }];
   },
   'card-buttons': function(t, options) {
@@ -14,7 +16,7 @@ window.TrelloPowerUp.initialize({
       text: 'Redmine Sync Card',
       callback: function (t, opts) {
           console.log('Someone clicked the button');
-        };
+        }
     }, {
       // but of course, you could also just kick off to a url if that's your thing
       icon: 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-gray.svg',
