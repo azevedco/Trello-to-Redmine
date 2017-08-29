@@ -1,16 +1,16 @@
 var test = function (t, opts) {
-//    var t = window.TrelloPowerUp.iframe();
-//    
-//    return t.getAll()
-//    .then(function (data) {
-//        console.log(JSON.stringify(data, null, 2));
-//    });
+    var t = window.TrelloPowerUp.iframe();
+    
+    return t.getAll()
+    .then(function (data) {
+        console.log(JSON.stringify(data, null, 2));
+    });
     
     console.log('Function being called');
 };
 
 window.TrelloPowerUp.initialize({
-//    'board-buttons': function(t, options){
+//    'board-buttons': function(t, options ){
 //        return [{
 //            icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
 //            text: 'Redmine Sync Board',
