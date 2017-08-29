@@ -14,7 +14,7 @@ window.TrelloPowerUp.initialize({
         return [{
             icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
             text: 'Redmine Sync Card',
-            callback: test
+            callback: function (t, opts) { console.log('Someone clicked the button'); }
         }, 
         {
             // but of course, you could also just kick off to a url if that's your thing
