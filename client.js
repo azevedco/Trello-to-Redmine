@@ -30,15 +30,16 @@ window.TrelloPowerUp.initialize({
             url: 'https://developers.trello.com',
             target: 'Trello Developer Site' // optional target for above url
         }];
+    },
+    'board-buttons': function(t, options){
+        return [{
+          icon: 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421',
+          text: 'Redmine Sync',
+          callback: test
+        }];
     }
 });
 
 /*
-  'board-buttons': function(t, options){
-    return [{
-      icon: 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421',
-      text: 'Redmine Sync',
-      callback: onBtnClick
-    }];
-  },
+  
 */
