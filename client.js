@@ -6,12 +6,6 @@ window.TrelloPowerUp.initialize({
       callback: function (t, opts) {
           console.log('Someone clicked the button');
         };
-    }, {
-      // but of course, you could also just kick off to a url if that's your thing
-      icon: 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-gray.svg',
-      text: 'Just a URL',
-      url: 'https://developers.trello.com',
-      target: 'Trello Developer Site' // optional target for above url
     }];
   },
   'card-buttons': function(t, options) {
@@ -21,6 +15,12 @@ window.TrelloPowerUp.initialize({
       callback: function (t, opts) {
           console.log('Someone clicked the button');
         };
+    }, {
+      // but of course, you could also just kick off to a url if that's your thing
+      icon: 'https://cdn.hyperdev.com/us-east-1%3A3d31b21c-01a0-4da2-8827-4bc6e88b7618%2Ficon-gray.svg',
+      text: 'Just a URL',
+      url: 'https://developers.trello.com',
+      target: 'Trello Developer Site' // optional target for above url
     }];
   }
 });
