@@ -1,82 +1,44 @@
-// key=
-// $.ajax({
-//     url: 'http://135.23.35.134:8099/redmine/issues.json',
-//     type: 'GET',
-//     data: 'key=', // or $('#myform').serializeArray()
-//     success: function() { alert('GET completed'); },
-//     failure: function() { alert('GET failed'); }
-// });
+var host = "";
+var api_Key = "";
 
-// $.ajax({ 
-//     type: 'GET', 
-//     url: 'http://135.23.35.134:8099/redmine/issues', 
-//     data: 'key=', 
-//     dataType: 'json',
-//     success: function (data) { 
-//         $.each(data, function(index, element) {
-//             $('body').append($('<div>', {
-//                 text: element.name
-//             }));
-//         });
-//     }
-// });
+function setAPIKey(key) {
+  this.apiKey = key;
+};
 
-var userName = "";
-var passWord = "";
-var redmineKey = "";
-var url = "135.23.35.134:8099/redmine/issues.json";
-var status = {
-  success: function() {
-    alert("It fucking worked.");
-  },
-  notmodified: function() {
-    alert("It wasn't fucking modified.");
-  },
-  error: function() {
-    alert("There was a fucking Error.");
-  },
-  timeout: function() {
-    alert("It fucking timed out.");
-  },
-  parsererror: function() {
-    alert("There was a fucking parse error.");
-  }
-}
+function getApiKey() {
+  return this.apiKey;
+};
 
-$(document).ready(function(){
-  // Syntax
-  // $.get(URL,data,function(data,status,xhr),dataType)
-  
-  //$("button").click(function(){
-      //$("h1").toggle();
-  //});
-  
-  $("#redminelogin").click(function(){
-      
-    redmineKey = $("#redminekey");
-      $("#test1").append("Key: " + redmineKey);
-    alert(("whatthefuck key ").append(redmineKey));
-    
-    $.getJSON(url, function(result){
-        $.each(result, function(i, field){
-            $("#test1").append(field + " ");
+function setHost(host) {
+  this.host = host;
+};
+
+function getHost() {
+  return this.host;
+};
+
+$(document).ready(function() {
+    //$.ajax({
+    $("#KeyBtn").click(function() {
+        api_Key = $("#ApiKeyText").val();
+        alert(api_Key);
+        $.ajax({
+            url: window.base_url + "http://135.23.35.134:8099/redmine/projects.json?key=" + api_Key,
+            type: 'GET',
+            crossDomain: true,
+            dataType: 'jsonp',
+            success: function (data) {
+                alert('Success!');
+                $.each(data.projects, function (index, project) {
+                    if (project.status === 1) {
+                        $("#ProjectSelect").append('<option value="' + project.id + '">' + project.name + '</option>');
+                    }
+                    ;
+                });
+            },
+            error: function () {
+                alert('Failed!');
+            },
         });
     });
-    
-  });
-  
-  // $("#redminelogin").click(function() {
-  //   userName = $("#username");
-  //   passWord = $("#password");
-  //   $("#test1").text(userName);
-  // });
-  
-  // $.ajax({
-  //   url: '135.23.35.134:8099/redmine/issues.xml?key=',
-  //   type: 'GET',
-  //   data: 'key=', // or $('#myform').serializeArray()
-  //   success: function() { alert('GET completed'); }
-  // });
-
 });
-
