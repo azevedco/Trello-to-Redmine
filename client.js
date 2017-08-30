@@ -1,12 +1,14 @@
 var test = function (t, opts) {
-    var t = window.TrelloPowerUp.iframe();
-    
-    return t.getAll()
-    .then(function (data) {
-        console.log(JSON.stringify(data, null, 2));
-    });
-    
     console.log('Full function should be getting called');
+//    
+//    var t = window.TrelloPowerUp.iframe();
+//    
+//    return t.getAll()
+//    .then(function (data) {
+//        console.log(JSON.stringify(data, null, 2));
+//    });
+//    
+    
 };
 
 window.TrelloPowerUp.initialize({
