@@ -16,6 +16,13 @@ var getBoardData = function (t, opts) {
     
 };
 
+var getListData = function (t, opts) {
+    return t.list('all')
+    .then(function(list) {
+        console.log(JSON.stringify(list, null, 2));
+    });
+}
+
 window.TrelloPowerUp.initialize({
 //    'board-buttons': function(t, options ){
 //        return [{
@@ -43,6 +50,12 @@ window.TrelloPowerUp.initialize({
           icon: 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421',
           text: 'Redmine Sync',
           callback: getBoardData
+        },{
+            
+            icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
+            text: 'Display List Data',
+            callback: getListData
+            
         }];
     }
 });
