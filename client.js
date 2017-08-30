@@ -1,5 +1,5 @@
 var test = function (t, opts) {
-    console.log('Full function should be getting called');
+    console.log('Full function should be getting called new test');
     
     var t = window.TrelloPowerUp.iframe();
     
