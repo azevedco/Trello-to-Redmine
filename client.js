@@ -1,5 +1,5 @@
 var test = function (t, opts) {
-    console.log('Trying to pull all card data now');
+    console.log('Trying to pull all data now');
     
 //    return t.card('all')
 //    .then(function (card) {
