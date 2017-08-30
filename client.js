@@ -1,9 +1,14 @@
 var test = function (t, opts) {
     console.log('Trying to pull all card data now');
     
-    return t.card('all')
-    .then(function (card) {
-        console.log(JSON.stringify(card, null, 2));
+//    return t.card('all')
+//    .then(function (card) {
+//        console.log(JSON.stringify(card, null, 2));
+//    });
+    
+    return t.getAll()
+    .then(function (data) {
+      console.log(JSON.stringify(data, null, 2));
     });
     
 };
