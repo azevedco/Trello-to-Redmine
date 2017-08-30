@@ -1,14 +1,17 @@
-var test = function (t, opts) {
-    console.log('Trying to pull all data now');
+var getCardData = function (t, opts) {
     
-//    return t.card('all')
-//    .then(function (card) {
-//        console.log(JSON.stringify(card, null, 2));
-//    });
-    
-    return t.getAll()
-    .then(function (data) {
-      console.log(JSON.stringify(data, null, 2));
+    return t.card('all')
+    .then(function (card) {
+        console.log(JSON.stringify(card, null, 2));
+    });
+
+};
+
+var getBoardData = function (t, opts) {
+  
+    return t.board('all')
+    .then(function(board) {
+        console.log(JSON.stringify(board, null, 2));
     });
     
 };
@@ -25,7 +28,7 @@ window.TrelloPowerUp.initialize({
         return [{
             icon: 'https://www.reddoorshelter.ca/sites/default/files/success-icon.png',
             text: 'Redmine Sync Card',
-            callback: test//function (t, opts) { console.log('Do something else pleaasase'); }
+            callback: getCardData//function (t, opts) { console.log('Do something else pleaasase'); }
         }, 
         {
             // but of course, you could also just kick off to a url if that's your thing
@@ -39,7 +42,7 @@ window.TrelloPowerUp.initialize({
         return [{
           icon: 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421',
           text: 'Redmine Sync',
-          callback: test
+          callback: getBoardData
         }];
     }
 });
