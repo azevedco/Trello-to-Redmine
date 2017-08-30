@@ -17,9 +17,9 @@ var getBoardData = function (t, opts) {
 };
 
 var getListData = function (t, opts) {
-    return t.list('all')
-    .then(function(list) {
-        console.log(JSON.stringify(list, null, 2));
+    return t.lists('all')
+    .then(function(lists) {
+        console.log(JSON.stringify(lists, null, 2));
     });
 }
 
