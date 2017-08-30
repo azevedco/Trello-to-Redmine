@@ -1,6 +1,6 @@
 {
   "name": "Redmine Sync",
-  "details":"Synchronize Trello cards with your teams Redmine.  This is currently working on GitHub part 2!!",
+  "details":"Synchronize Trello cards with your teams Redmine.  This is currently working on GitHub!!",
   "icon": {
     "url": "https://www.reddoorshelter.ca/sites/default/files/success-icon.png"
   },
@@ -8,8 +8,7 @@
   "capabilities": [
     "card-buttons",
     "callback",
-    "board-buttons",
-    "callback"
+    "board-buttons"
   ],
   "connectors": {
     "iframe": {
