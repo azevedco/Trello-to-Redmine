@@ -7,8 +7,9 @@
   "author": "Speax Inc.",
   "capabilities": [
     "card-buttons",
+    "callback",
     "board-buttons",
-    "callback"
+    
   ],
   "connectors": {
     "iframe": {
