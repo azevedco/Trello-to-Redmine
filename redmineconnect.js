@@ -1,27 +1,11 @@
-var host = "";
-var api_Key = "";
+var base_url = "http://135.23.35.134:8099/redmine";
+var api_Key = "3edf27544b0dc1a88edc6dd6da00245dc05ca0b5";
 
 var localProjectId = "";
 
-function setAPIKey(key) {
-  this.apiKey = key;
-};
-
-function getApiKey() {
-  return this.apiKey;
-};
-
-function setHost(host) {
-  this.host = host;
-};
-
-function getHost() {
-  return this.host;
-};
-
 var loadIssues = function(projectId) {
     $.ajax({
-        url: host + "/issues.json?key=" + api_Key + "&project_id=" + projectId,
+        url: window.base_url + "/issues.json?key=" + window.api_Key + "&project_id=" + projectId,
         type: 'GET',
         crossDomain: true,
         dataType: 'jsonp',
@@ -61,10 +45,10 @@ var createIssue = function (projectId, subject) {
 $(document).ready(function() {
     //$.ajax({
     $("#KeyBtn").click(function() {
-        api_Key = $("#ApiKeyText").val();
-        host = $("#HostText").val();
+        window.api_Key = $("#ApiKeyText").val();
+        window.base_url = $("#HostText").val();
         $.ajax({
-            url: host + "/projects.json?key=" + api_Key,
+            url: window.base_url + "/projects.json?key=" + window.api_Key,
             type: 'GET',
             crossDomain: true,
             dataType: 'jsonp',

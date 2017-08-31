@@ -7,10 +7,14 @@
         <script src="https://trello.com/power-ups/power-up.min.js"></script>
         <script src="./client.js"></script>
         <script src="./redmineconnect.js"></script>
+        <script>
+            window.api_Key = "{{ api_key }}";
+            window.base_url = "{{ base_url }}";
+        </script>
     </head>
     <body>
-        <input type="text" id="HostText" placeholder="Host ex.http://url/redmine" value="http://135.23.35.134:8099/redmine">
-        <input type="text" id="ApiKeyText" placeholder="API Key" value="3edf27544b0dc1a88edc6dd6da00245dc05ca0b5">
+        <input type="text" id="HostText" placeholder="Host ex.http://url/redmine" value="">
+        <input type="text" id="ApiKeyText" placeholder="API Key" value="">
         <button id="KeyBtn">Check Key</button>
         <br>
         <select id="ProjectSelect">
