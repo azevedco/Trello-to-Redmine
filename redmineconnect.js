@@ -46,6 +46,7 @@ $(document).ready(function() {
     $("#KeyBtn").click(function() {
         api_Key = $("#ApiKeyText").val();
         host = $("#HostText").val();
+        console.log(host + "/projects.json?key=" + api_Key);
         $.ajax({
             url: host + "/projects.json?key=" + api_Key,
             type: 'GET',
