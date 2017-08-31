@@ -24,9 +24,27 @@ var loadIssues = function(projectId) {
     });
 };
 
+//var createIssue = function (projectId, subject) {
+//    $.ajax({
+//        url: "/commands/create_issue",
+//        type: 'POST',
+//        data: JSON.stringify({project_id: projectId, subject: subject}),
+//        headers: {
+//            'Accept': 'application/json',
+//            'Content-Type': 'application/json'
+//        },
+//        success: function (data) {
+//            loadIssues(projectId);
+//        },
+//        error: function () {
+//            alert('Failed!');
+//        },
+//    });
+//};
+
 var createIssue = function (projectId, subject) {
     $.ajax({
-        url: "/commands/create_issue",
+        url: "/",
         type: 'POST',
         data: JSON.stringify({project_id: projectId, subject: subject}),
         headers: {

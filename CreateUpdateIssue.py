@@ -8,3 +8,7 @@ def create_issue():
 #    issue.save()
     print "Fuck"
     return "OK"
+
+@app.route("/", methods=["POST"])
+def test():
+    return "OK"
