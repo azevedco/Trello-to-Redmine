@@ -44,7 +44,7 @@ var loadIssues = function(projectId) {
 
 var createIssue = function (projectId, subject) {
     $.ajax({
-        url: "/",
+        url: "/commands/create_issue",
         type: 'POST',
         data: JSON.stringify({project_id: projectId, subject: subject}),
         headers: {
