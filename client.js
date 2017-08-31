@@ -64,7 +64,18 @@ window.TrelloPowerUp.initialize({
         // you can also return the object synchronously if you know
         // the answer synchronously
         return new TrelloPowerUp.Promise((resolve) => resolve({ authorized: false }));
-    }
+    },
+    'show-authorization': function(t, options){
+    // return what to do when a user clicks the 'Authorize Account' link
+    // from the Power-Up gear icon which shows when 'authorization-status'
+    // returns { authorized: false }
+    // in this case we would open a popup
+    return t.popup({
+      title: 'My Auth Popup',
+      url: './authorizeRedmine.html',
+      height: 140,
+    });
+  }
 });
 
 /*
