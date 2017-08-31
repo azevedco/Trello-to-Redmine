@@ -1,5 +1,3 @@
-var promise = window.TrelloPowerUp.Promise;
-
 var getCardData = function (t, opts) {
     
     return t.card('all')
