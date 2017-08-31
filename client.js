@@ -63,7 +63,7 @@ window.TrelloPowerUp.initialize({
         // a property 'authorized' being true/false
         // you can also return the object synchronously if you know
         // the answer synchronously
-        return new TrelloPowerUp.Promise((resolve) => resolve({ authorized: false }));
+        return new TrelloPowerUp.Promise((resolve) => resolve({ authorized: true }));
     },
     'show-authorization': function(t, options){
     // return what to do when a user clicks the 'Authorize Account' link
