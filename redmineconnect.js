@@ -1,7 +1,7 @@
 var host = "";
 var api_Key = "";
 
-var project_Id = "";
+var localProjectId = "";
 
 function setAPIKey(key) {
   this.apiKey = key;
@@ -83,13 +83,13 @@ $(document).ready(function() {
     });
     
     $("#ProjectSelect").change(function() {
-        project_Id = $("#ProjectSelect option:selected").attr('value');
-        loadIssues(project_Id);
+        localProjectId = $("#ProjectSelect option:selected").attr('value');
+        loadIssues(localProjectId);
     });
     
     $("#AddIssue").click(function () {
-        project_Id = $("#ProjectSelect option:selected").attr('value');
-        createIssue(project_Id, 'New issue'); 
+        localProjectId = $("#ProjectSelect option:selected").attr('value');
+        createIssue(localProjectId, 'New issue'); 
     });
     
 });
