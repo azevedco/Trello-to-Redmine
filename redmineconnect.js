@@ -1,7 +1,7 @@
 var host = "";
 var api_Key = "";
 
-var projectId = "";
+var project_Id = "";
 
 function setAPIKey(key) {
   this.apiKey = key;
@@ -40,13 +40,29 @@ var loadIssues = function(projectId) {
     });
 };
 
+var createIssue = function (projectId, subject) {
+    $.ajax({
+        url: "/commands/create_issue",
+        type: 'POST',
+        data: JSON.stringify({project_id: projectId, subject: subject}),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        success: function (data) {
+            loadIssues(projectId);
+        },
+        error: function () {
+            alert('Failed!');
+        },
+    });
+};
 
 $(document).ready(function() {
     //$.ajax({
     $("#KeyBtn").click(function() {
         api_Key = $("#ApiKeyText").val();
         host = $("#HostText").val();
-        console.log(host + "/projects.json?key=" + api_Key);
         $.ajax({
             url: host + "/projects.json?key=" + api_Key,
             type: 'GET',
@@ -67,9 +83,15 @@ $(document).ready(function() {
     });
     
     $("#ProjectSelect").change(function() {
-        projectId = $("#ProjectSelect option:selected").attr('value');
-        loadIssues(projectId);
+        project_Id = $("#ProjectSelect option:selected").attr('value');
+        loadIssues(project_Id);
     });
+    
+    $("#AddIssue").click(function () {
+        project_Id = $("#ProjectSelect option:selected").attr('value');
+        createIssue(project_Id, 'New issue'); 
+    });
+    
 });
 
 
