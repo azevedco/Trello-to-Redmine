@@ -73,7 +73,7 @@ window.TrelloPowerUp.initialize({
     // returns { authorized: false }
     // in this case we would open a popup
     return t.popup({
-      title: 'My Auth Popup',
+      title: 'Redmine API Key',
       url: './authorizeRedmine.html',
       height: 140,
     });
